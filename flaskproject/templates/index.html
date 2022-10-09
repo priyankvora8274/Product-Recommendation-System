@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recommender</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="../static/css/style.css" rel="stylesheet" />
+</head>
+
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="../static/img/t2.jpg">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="../static/img/cart.png" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">E-commerce Website</h1>
+								<h6 class="tm-site-description">Collaborative Product Recommendation Engine</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="logout" class="tm-nav-link active">logout</a></li>
+								<li class="tm-nav-li"><a href="about" class="tm-nav-link" >About</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Welcome to my E-commerce Website</h2>
+				<p class="col-12 text-center">Please select upto one item and click on 'Add' to display the recommended products. Happy shopping!</p>
+			</header>
+			
+			<div class="tm-paging-links">
+				<nav>
+					<ul>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Kitchen And Cuttlery</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Toys</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Mugs</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Cases</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="tm-gallery-page-Kitchen And Cuttlery" class="tm-gallery-page">
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/BLUE+3+PIECE+POLKADOT+CUTLERY+SET.jpg" style="height:200px;widht:200px" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">BLUE 3 PIECE POLKADOT CUTLERY SET</h4>
+								<p class="tm-gallery-price">&#36;8 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('BLUE 3 PIECE POLKADOT CUTLERY SET')" >Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/BOX+OF+6+ASSORTED+COLOUR+TEASPOONS.jpg" style="height:200px;widht:200px" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">BOX OF 6 ASSORTED COLOUR TEASPOONS</h4>
+								<p class="tm-gallery-price">&#36;6 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc( 'BOX OF 6 ASSORTED COLOUR TEASPOONS')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/JAM+MAKING+SET+WITH+JARS.jpg" style="height:200px;widht:200px" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">JAM MAKING SET WITH JARS</h4>
+								
+								<p class="tm-gallery-price">&#36;7 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('JAM MAKING SET WITH JARS')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 1 -->
+				
+				
+				
+				
+				
+				<!-- gallery page 2 -->
+				<div id="tm-gallery-page-toys" class="tm-gallery-page hidden">
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/FELTCRAFT+PRINCESS+CHARLOTTE+DOLL.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center"> FELTCRAFT PRINCESS CHARLOTTE DOLL</h4>
+								<p class="tm-gallery-price">&#36;5<button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('FELTCRAFT PRINCESS CHARLOTTE DOLL')">Add</button></p>
+								
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/MINI+JIGSAW+CIRCUS+PARADE.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">MINI JIGSAW CIRCUS PARADE</h4>
+								<p class="tm-gallery-price">&#36;2 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('MINI JIGSAW CIRCUS PARADE')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/MINI+JIGSAW+SPACEBOY.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">MINI JIGSAW SPACEBOY</h4>
+								<p class="tm-gallery-price">&#36;25 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('MINI JIGSAW SPACEBOY')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 2 -->
+				
+				
+				<!-- gallery page 3 -->
+				<div id="tm-gallery-page-mugs" class="tm-gallery-page hidden">
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/IVORY+KNITTED+MUG+COSY.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center"> IVORY KNITTED MUG COSY</h4>
+								<p class="tm-gallery-price">&#36;5<button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('IVORY KNITTED MUG COSY')">Add</button></p>
+								
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/RETRO+COFFEE+MUGS+ASSORTED.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">RETRO COFFEE MUGS ASSORTED</h4>
+								<p class="tm-gallery-price">&#36;2 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('RETRO COFFEE MUGS ASSORTED')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/SAVE+THE+PLANET+MUG.jpeg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">SAVE THE PLANET MUG</h4>
+								<p class="tm-gallery-price">&#36;25 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('SAVE THE PLANET MUG')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 3 -->
+				
+				<!-- gallery page 4 -->
+				<div id="tm-gallery-page-cases" class="tm-gallery-page hidden">
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/MINI+PAINT+SET+VINTAGE.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center"> MINI PAINT SET VINTAGE</h4>
+								<p class="tm-gallery-price">&#36;5<button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('MINI PAINT SET VINTAGE') ">Add</button></p>
+								
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/PACK+OF+60+DINOSAUR+CAKE+CASES.jpg" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">PACK OF 60 DINOSAUR CAKE CASES</h4>
+								<p class="tm-gallery-price">&#36;2 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('PACK OF 60 DINOSAUR CAKE CASES')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-4 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="https://project-images-007.s3.us-east-2.amazonaws.com/PACK+OF+72+RETROSPOT+CAKE+CASES.jfif" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title text-center">PACK OF 72 RETROSPOT CAKE CASES</h4>
+								<p class="tm-gallery-price">&#36;25 <button type="button" class="tm-btn tm-btn-success tm-add" onclick="loadDoc('PACK OF 72 RETROSPOT CAKE CASES')">Add</button></p>
+							</figcaption>
+						</figure>
+					</article>
+				</div> <!-- gallery page 4 -->
+				
+				
+
+			</div>
+			<h4 class="col-12 text-center tm-section-title tm-reco">Recommendations</h4>
+				<p class="col-12 text-center">Based on the added item, you may also like..</p> <br>
+				<p class="col-12 text-center"> 
+				<div class="row tm-gallery" id ="demo">
+				
+				</div>
+			
+
+
+
+		
+		</main>
+		
+
+
+	</div>
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/parallax.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+		
+		function loadDoc(product) {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				 
+				 var recc = '';
+				 var temp = this.responseText.split("#");
+				 for(var i=0;i<temp.length;i++)
+				 {
+					recc+='<span class="reco" style="margin-left:100px!important;padding: 5px !important;box-shadow: 2px 2px 10px #00000045 !important;">'+temp[i]+'</span>' ;
+				 }
+				 
+				 
+				 document.getElementById("demo").innerHTML = recc;
+				 
+				 
+			  }
+			  }
+			  xhttp.open("GET", "/product/"+product, true);
+			  xhttp.send();
+		}
+
+	</script>
+	
+</body>
+</html>

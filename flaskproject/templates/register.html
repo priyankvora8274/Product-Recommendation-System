@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.register-background{
+			opacity: 0.65; 
+			top: 0;
+			left: 0;
+			bottom: 0;
+  			right: 0;
+  			position: absolute;
+  			height: 100%;
+  			width: 100%;
+		}
+
+		.header-div{
+			height: 60px; 
+			width: 100%; 
+			position: absolute; 
+			opacity: 0.85;
+			top: 0px; 
+			left: 0px; 
+			background-color: black;
+		}
+
+		.website-logo{
+			height:30px;
+			margin-top: 1%; 
+			margin-left: 15px;
+		    font-size: 25px; 
+		    font-weight: bold; 
+		    color:white; 
+		    float: left; 	
+		}
+
+		.login-div{
+			height:30px;
+			margin-left: 84%; 
+			margin-top: 1%;
+		}
+
+		.hyperlink-about-login{
+			text-decoration:none; 
+			color:white; 
+			font-size: 25px; 
+			font-weight: bold;
+			padding: 3px 3px 3px 3px;
+		}
+
+		.signup-form-div{
+			height: 400px; 
+			width: 550px; 
+			margin-top: 200px;
+			/*margin-left: 600/2 px;*/
+			margin-left : 30%; 
+			background-color: lightgray; 
+			position: relative;	
+		}
+
+		.signup-div{
+			width:100%; 
+			height: 50px; 
+			opacity: 0.85;
+			background-color: black; 
+			color: lightgrey; 
+			font-weight: bold;
+			position: relative; 
+			text-align: center
+		}
+
+		.signup-textbox{
+			margin-top: 20px; 
+			margin-left: 15%; 
+			height: 30px; 
+			width: 70%; 
+			border-radius: 15px;
+		}
+
+		.signup-button{
+			margin-top: 25px; 
+			margin-left: 42%; 
+			opacity: 0.85;
+			color: white;
+			background-color: black;
+			height: 30px; 
+			width: 100px;
+			border-radius: 15px;
+		}
+
+	</style>
+</head>
+<body> 
+	<img src="../static/img/wallpaper.jpeg" class="register-background">
+	
+	<div class="header-div">
+		<div class="website-logo">Ecommerce Website</div>
+		<div class="login-div">
+			<a href="about" class="hyperlink-about-login" style="">About Us</a>
+			<a href="login" class="hyperlink-about-login" style="margin-left: 15px;">Log In</a>
+		</div>
+	</div>
+
+	<div class="signup-form-div" >
+		<div class="signup-div">
+			<h1 style="align-content: center; margin-top: 100px; padding-top: 5px;">Sign Up</h1>
+		</div>
+		<div style="width: 100%; height: 100%; position: relative;">
+			<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <div style="margin-left:23%;margin-top:16%" class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div style="margin-left:28%;margin-top:3%" class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div style="margin-left:24%;margin-top:3%" class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div style="margin-left:13%;margin-top:3%" class="form-group">
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            <div style="margin-left:45%;margin-top:3%" class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+		</div>
+	</div>
+</body>
+</html>
